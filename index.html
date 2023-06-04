@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vista</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/vista2.png" />
+  </head>
+
+  <body class="">
+    <header>
+      <div class="flex justify-between items-center py-5 px-6 md:px-10 lg:px-14 xl:px-20">
+        <div>
+          <img class="img-logo" src="images/vista2.png" alt="" />
+        </div>
+        <div class="hidden md:flex space-x-4">
+          <a href="#" class="py-2 px-2 text-gray-600 font-semibold hover:text-gray-800">Cek Pesanan</a>
+          <a href="#footer" class="py-2 px-2 text-gray-600 font-semibold hover:text-gray-800">Kontak</a>
+          <a href="#" class="py-2 px-2 text-gray-600 font-bold hover:text-gray-800">Masuk</a>
+          <a href="#" class="py-2 px-2 text-gray-600 font-bold hover:text-gray-800">Daftar</a>
+        </div>
+        <div class="md:hidden">
+          <button class="flex items-center px-3 py-2 rounded-md text-gray-600 hover:text-gray-800 focus:outline-none focus:text-gray-800" aria-label="Menu">
+            <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M3 6a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid grid-rows-3 grid-flow-col gap-4 h-auto">
+      <div class="">
+        <div class="py-5 container-first bg-cover relative">
+          <div class="max-w-md bg-white p-8 mr-28 mt-32 border-2 border-gray-300 shadow-md rounded-xl float-right">
+            <form>
+              <div class="mb-4">
+                <label for="check-in" class="block text-gray-700 font-bold mb-2">Check-in:</label>
+                <input
+                  type="text"
+                  id="check-in"
+                  name="check-in"
+                  class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-500"
+                  min="1980-01-01"
+                  max="2000-01-01"
+                  placeholder="Pilih tanggal check-in"
+                  required
+                />
+              </div>
+              <div class="mb-4">
+                <label for="check-out" class="block text-gray-700 font-bold mb-2">Check-out:</label>
+                <input type="text" id="check-out" name="check-out" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-500" placeholder="Pilih tanggal check-out" required />
+              </div>
+              <div class="mb-4 relative">
+                <label for="city" class="block text-gray-700 font-bold mb-2">Kota:</label>
+                <input type="text" id="city" name="city" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-500" placeholder="Cari kota" autocomplete="off" required />
+                <ul id="city-dropdown" class="absolute mt-2 bg-white border border-gray-300 rounded-md shadow-md hidden"></ul>
+              </div>
+              <div class="flex justify-end">
+                <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">Cari</button>
+              </div>
+            </form>
+          </div>
+          <div class="text-prom absolute bottom-20 left-0 right-0 ml-28 mb-8 mt-8">
+            <span class="text-6xl font-bold text-white">Booking hotel anda <br />bersama kami</span>
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <div class="ml-28">
+          <span class="text-2xl font-semibold">Hotel Populer di berbagai kota</span><br />
+          <span>Dengan berbagai macam pilihan hotel</span>
+        </div>
+        <div class="py-5 grid grid-cols-5 ml-28 mr-28">
+          <!-- card 1 -->
+          <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow w-60 h-auto">
+            <a href="#">
+              <img class="rounded-t-lg object-cover h-40 w-72" src="https://images.pexels.com/photos/2670273/pexels-photo-2670273.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+            </a>
+            <div class="p-5">
+              <span class="font-semibold">Hotel A</span><br />
+              <span class="text-yellow-400"><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i></span><br />
+              <span class="text-sm">Ciwidey, Bandung</span><br />
+              <span class="text-sm">Mulai dari</span>
+
+              <span class="font-semibold">Rp 1.600.000 </span>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow w-60 h-auto">
+            <a href="#">
+              <img class="rounded-t-lg object-cover h-40 w-72" src="https://images.pexels.com/photos/1813467/pexels-photo-1813467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+            </a>
+            <div class="p-5">
+              <span class="font-semibold">Hotel B</span><br />
+              <span class="text-yellow-400"><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i></span><br />
+              <span class="text-sm">Condongcatur, Yogyakarta</span><br />
+              <span class="text-sm">Mulai dari</span>
+              <span class="font-semibold">Rp 1.850.000 </span>
+            </div>
+          </div>
+          <!-- card 3 -->
+          <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow w-60 h-auto">
+            <a href="#">
+              <img class="rounded-t-lg object-cover h-40 w-72" src="https://images.pexels.com/photos/1134176/pexels-photo-1134176.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+            </a>
+            <div class="p-5">
+              <span class="font-semibold">Hotel C</span><br />
+              <span class="text-yellow-400"><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i></span><br />
+              <span class="text-sm">Ubud, Bali</span><br />
+              <span class="text-sm">Mulai dari</span>
+              <span class="font-semibold">Rp 2.000.000 </span>
+            </div>
+          </div>
+          <!-- card 4 -->
+          <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow w-60 h-auto">
+            <a href="#">
+              <img class="rounded-t-lg object-cover h-40 w-72" src="https://images.pexels.com/photos/1001965/pexels-photo-1001965.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+            </a>
+            <div class="p-5">
+              <span class="font-semibold">Hotel D</span><br />
+              <span class="text-yellow-400"><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i></span><br />
+              <span class="text-sm">Mangga Dua, Jakarta Utara</span><br />
+              <span class="text-sm">Mulai dari</span>
+              <span class="font-semibold">Rp 950.000 </span>
+            </div>
+          </div>
+          <!-- card 5 -->
+          <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow w-60 h-auto">
+            <a href="#">
+              <img class="rounded-t-lg object-cover h-40 w-72" src="https://images.pexels.com/photos/2403017/pexels-photo-2403017.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+            </a>
+            <div class="p-5">
+              <span class="font-semibold">Hotel E</span><br />
+              <span class="text-yellow-400"><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i></span><br />
+              <span class="text-sm">Gubeng, Surabaya</span><br />
+              <span class="text-sm">Mulai dari</span>
+              <span class="font-semibold">Rp 1.120.000 </span>
+            </div>
+          </div>
+
+          <!-- card 6 -->
+        </div>
+        <div class="text-right mr-32">
+          <span><a href="#" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Lihat selengkapnya</a></span>
+        </div>
+        <div class="ml-28 mr-28 mt-8">
+          <span class="text-2xl font-semibold">Kerja sama bersama kami</span><br />
+          <img src="images/banner.jpg" class="border shadow-lg rounded-lg mt-4" alt="" />
+        </div>
+      </div>
+      <div class="">
+        <div class="ml-28 mt-8">
+          <span class="text-2xl font-semibold">Temukan kota wisatamu</span><br />
+          <span>Eksplor kota kota indah di Indonesia</span>
+        </div>
+        <div class="py-5 grid grid-cols-7 ml-28 mr-28">
+          <!-- card 1 -->
+          <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow w-44 h-64 relative hover:shadow-lg transform hover:-translate-y-2 transition duration-300 ease-in-out">
+            <a href="#">
+              <img class="rounded-lg object-cover h-full w-72" src="https://images.pexels.com/photos/12910426/pexels-photo-12910426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+              <div class="absolute inset-0 flex items-center justify-center">
+                <span class="text-white text-2xl font-bold">Jogja</span>
+              </div>
+            </a>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
+          </div>
+          <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow w-44 h-64 relative hover:shadow-lg transform hover:-translate-y-2 transition duration-300 ease-in-out">
+            <a href="#">
+              <img class="rounded-lg object-cover h-full w-72" src="https://www.suarasurabaya.net/wp-content/uploads/2015/03/kk149010_clip10.jpg" alt="" />
+              <div class="absolute inset-0 flex items-center justify-center">
+                <span class="text-white text-2xl font-bold">Surabaya</span>
+              </div>
+            </a>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
+          </div>
+          <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow w-44 h-64 relative hover:shadow-lg transform hover:-translate-y-2 transition duration-300 ease-in-out">
+            <a href="#">
+              <img
+                class="rounded-lg object-cover h-full w-72"
+                src="https://images.pexels.com/photos/15497721/pexels-photo-15497721/free-photo-of-al-jabbar-grand-mosque-bandung-west-java-indonesia.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt=""
+              />
+              <div class="absolute inset-0 flex items-center justify-center">
+                <span class="text-white text-2xl font-bold">Bandung</span>
+              </div>
+            </a>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
+          </div>
+          <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow w-44 h-64 relative hover:shadow-lg transform hover:-translate-y-2 transition duration-300 ease-in-out">
+            <a href="#">
+              <img class="rounded-lg object-cover h-full w-72" src="https://images.pexels.com/photos/1643130/pexels-photo-1643130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+              <div class="absolute inset-0 flex items-center justify-center">
+                <span class="text-white text-2xl font-bold">Bali</span>
+              </div>
+            </a>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
+          </div>
+          <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow w-44 h-64 relative hover:shadow-lg transform hover:-translate-y-2 transition duration-300 ease-in-out">
+            <a href="#">
+              <img class="rounded-lg object-cover h-full w-72" src="https://images.pexels.com/photos/14498176/pexels-photo-14498176.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+              <div class="absolute inset-0 flex items-center justify-center">
+                <span class="text-white text-2xl font-bold">Semarang</span>
+              </div>
+            </a>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
+          </div>
+          <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow w-44 h-64 relative hover:shadow-lg transform hover:-translate-y-2 transition duration-300 ease-in-out">
+            <a href="#">
+              <img class="rounded-lg object-cover h-full w-72" src="https://images.pexels.com/photos/13373196/pexels-photo-13373196.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+              <div class="absolute inset-0 flex items-center justify-center">
+                <span class="text-white text-2xl font-bold">Makassar</span>
+              </div>
+            </a>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
+          </div>
+          <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow w-44 h-64 relative hover:shadow-lg transform hover:-translate-y-2 transition duration-300 ease-in-out">
+            <a href="#">
+              <img class="rounded-lg object-cover h-full w-72" src="https://images.pexels.com/photos/13011038/pexels-photo-13011038.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+              <div class="absolute inset-0 flex items-center justify-center">
+                <span class="text-white text-2xl font-bold">Jakarta</span>
+              </div>
+            </a>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
+          </div>
+          <!-- card 2 -->
+        </div>
+      </div>
+
+      <!-- ... -->
+    </div>
+
+    <footer class="bg-slate-800 py-8" id="footer">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div class="text-gray-300">
+            <h3 class="text-lg font-semibold mb-4">Kontak</h3>
+            <p class="mb">Alamat: Jalan Raya 123, Yogyakarta</p>
+            <p class="mb">Telepon: (123) 456-7890</p>
+            <p>Email: info@vistajogja.com</p>
+          </div>
+          <div class="text-gray-300">
+            <h3 class="text-lg font-semibold mb-4">Tentang Vista Hotel</h3>
+            <div class="">
+              <a href="">Cara booking</a><br />
+              <a href="">Customer service</a><br />
+              <a href="">Tentang kami</a>
+            </div>
+          </div>
+          <div class="text-gray-300">
+            <h3 class="text-lg font-semibold mb-4">Sosial Media</h3>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-gray-200">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C6.486 2 2 6.486 2 12c0 4.411 3.589 8 8 8s8-3.589 8-8c0-4.414-3.586-8-8-8zm2.5 15.007h-2.216v-5.431H9v-1.787h1.284v-.958c0-1.313.636-2.544 2.589-2.544h1.847v1.787h-1.042c-.593 0-.616.22-.616.616v.76h1.658l-.161 1.786H14.5v5.431z"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-gray-200">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C6.486 2 2 6.486 2 12c0 5.514 4.486 10 10 10s10-4.486 10-10c0-5.514-4.486-10-10-10zm5.13 8.366c.003.063.005.127.005.192a7.134 7.134 0 01-7.134 7.134c-1.582 0-3.048-.513-4.239-1.38.216.025.434.038.654.038 1.288 0 2.47-.438 3.408-1.17a2.52 2.52 0 01-2.36-1.746c.155.03.312.046.474.046.229 0 .454-.029.667-.083-1.169-.24-2.053-1.274-2.053-2.513v-.031a2.557 2.557 0 001.155.32 2.528 2.528 0 01-1.202-2.12c0-.466.124-.894.338-1.268a7.206 7.206 0 005.225 2.646 2.538 2.538 0 014.34-2.317 5.05 5.05 0 001.612-.615 2.532 2.532 0 01-1.114 1.398 5.093 5.093 0 001.453-.397 5.36 5.36 0 01-1.328 1.376z"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-gray-200">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C6.486 2 2 6.486 2 12c0 5.514 4.486 10 10 10s10-4.486 10-10c0-5.514-4.486-10-10-10zm0 18.25c-4.806 0-8.75-3.944-8.75-8.75S7.194 2.75 12 2.75s8.75 3.944 8.75 8.75-3.944 8.75-8.75 8.75zm5.05-12.174a.601.601 0 01-.852-.05l-2.236-2.236-2.237 2.237a.602.602 0 11-.852-.852l2.237-2.236-2.236-2.237a.601.601 0 01.852-.852l2.236 2.237 2.237-2.237a.602.602 0 01.852.852l-2.237 2.236 2.236 2.237c.237.236.237.616 0 .853z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/id.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
